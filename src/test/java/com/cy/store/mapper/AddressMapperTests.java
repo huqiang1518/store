@@ -58,6 +58,7 @@ public class AddressMapperTests {
         addressMapper.deleteByAid(1);
     }
 
+
     @Test
     public void findLastModified(){
         System.out.println(addressMapper.findLastModified(23));
