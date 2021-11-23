@@ -14,11 +14,12 @@ public class JsonResult<E> implements Serializable {
     private E data;
 
 
-    /**项目产生异常，自定义异常描述方法*/
+    /**
+     * 项目产生异常，自定义异常描述方法
+     */
     public JsonResult(Throwable e) {
         this.message = e.getMessage();
     }
-
 
 
     public JsonResult() {
@@ -28,7 +29,12 @@ public class JsonResult<E> implements Serializable {
         this.state = state;
     }
 
-    public JsonResult(Integer state, E data) {
+    public JsonResult(Integer state, E data ,String message) {
+        this.state = state;
+        this.message=message;
+        this.data = data;
+    }
+    public JsonResult(Integer state, E data ) {
         this.state = state;
         this.data = data;
     }
